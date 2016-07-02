@@ -81,6 +81,7 @@ public class SplashScreenModule extends ReactContextBaseJavaModule implements Li
                             splashDialog.dismiss();
                             splashDialog = null;
                             splashImageView = null;
+                            return;
                         }
                         @Override
                         public void onAnimationRepeat(Animation animation) {
@@ -133,7 +134,9 @@ public class SplashScreenModule extends ReactContextBaseJavaModule implements Li
                 }
                 splashDialog.setContentView(splashImageView);
                 splashDialog.setCancelable(false);
-                splashDialog.show();
+                if (!activity.isFinishing()) {
+                    splashDialog.show();
+                }
             }
         });
     }
