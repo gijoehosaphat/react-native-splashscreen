@@ -21,14 +21,12 @@ import com.facebook.react.bridge.LifecycleEventListener;
 import com.facebook.react.bridge.ReactMethod;
 
 
-public class SplashScreenModule extends ReactContextBaseJavaModule implements LifecycleEventListener {
+public class RCTSplashScreen extends ReactContextBaseJavaModule implements LifecycleEventListener {
     private static Dialog splashDialog;
     private ImageView splashImageView;
     private boolean splashed = false;
 
-    private Activity activity;
-
-    public SplashScreenModule(ReactApplicationContext reactContext) {
+    public RCTSplashScreen(ReactApplicationContext reactContext) {
         super(reactContext);
         reactContext.addLifecycleEventListener(this);
     }
@@ -134,7 +132,7 @@ public class SplashScreenModule extends ReactContextBaseJavaModule implements Li
                 }
                 splashDialog.setContentView(splashImageView);
                 splashDialog.setCancelable(false);
-                if (!activity.isFinishing()) {
+                if (!currentActivity.isFinishing()) {
                     splashDialog.show();
                 }
             }
