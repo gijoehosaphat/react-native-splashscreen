@@ -92,9 +92,9 @@ public class RCTSplashScreen extends ReactContextBaseJavaModule implements Lifec
 
     private int getSplashId() {
         Activity currentActivity = getCurrentActivity();
-        int drawableId = currentActivity.getResources().getIdentifier("screen", "drawable", currentActivity.getClass().getPackage().getName());
+        int drawableId = currentActivity.getResources().getIdentifier("splash", "drawable", currentActivity.getClass().getPackage().getName());
         if (drawableId == 0) {
-            drawableId = currentActivity.getResources().getIdentifier("screen", "drawable", currentActivity.getPackageName());
+            drawableId = currentActivity.getResources().getIdentifier("splash", "drawable", currentActivity.getPackageName());
         }
         return drawableId;
     }
