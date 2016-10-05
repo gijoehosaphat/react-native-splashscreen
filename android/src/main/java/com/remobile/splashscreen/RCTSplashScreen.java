@@ -22,7 +22,7 @@ import com.facebook.react.bridge.ReactMethod;
 
 
 public class RCTSplashScreen extends ReactContextBaseJavaModule implements LifecycleEventListener {
-    private static Dialog splashDialog;
+    public static Dialog splashDialog;
     private ImageView splashImageView;
     public static boolean splashed = false;
 
