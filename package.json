@@ -1,6 +1,6 @@
 {
     "name": "react-native-splashscreen",
-    "version": "1.0.3a",
+    "version": "1.0.3.1",
     "description": "A splashscreen for react-native, hide when application loaded",
     "main": "index.js",
     "author": {
